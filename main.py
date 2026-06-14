@@ -25,7 +25,7 @@ for i in range(0,len(records)):
             connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(
-                from_addr=my_gmail,
+                from_addr=MY_EMAIL,
                 to_addrs=records[i]['email'],
                 msg=f"Subject:Happy Birthday!\n\n{message_with_name}"
             )
